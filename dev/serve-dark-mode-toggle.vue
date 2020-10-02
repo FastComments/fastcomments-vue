@@ -1,11 +1,11 @@
 <script lang="ts">
     import Vue from 'vue';
-    import FastcommentsVue from '@/fastcomments-vue.vue';
+    import FastCommentsVue from '@/fastcomments-vue.vue';
 
     export default Vue.extend({
         name: 'ServeDev',
         components: {
-            FastcommentsVue
+            FastCommentsVue
         },
         data() {
             return {
