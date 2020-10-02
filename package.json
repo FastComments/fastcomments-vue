@@ -1,9 +1,9 @@
 {
   "name": "fastcomments-vue",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "winrid",
   "license": "MIT",
-  "repository": "fastcomments/fastcomments-react",
+  "repository": "fastcomments/fastcomments-vue",
   "description": "A Vue library for FastComments",
   "main": "dist/fastcomments-vue.ssr.js",
   "browser": "dist/fastcomments-vue.esm.js",
