@@ -22,7 +22,7 @@ yarn add fastcomments-vue
 
 ### The Comment Widget
 
-The FastcommentsVue component contains the live FastComments comment widget.
+The FastCommentsVue component contains the live FastComments comment widget.
 
 Replace "demo" below with your "tenantId" - available [here](https://fastcomments.com/auth/my-account/get-acct-code) in the FastComments admin area.
 
@@ -31,19 +31,19 @@ The widget supports a lot of options - see FastCommentsConfig in src/fastcomment
 ```vue
 <script lang="ts">
 import Vue from 'vue';
-import FastcommentsVue from 'fastcomments-vue.vue';
+import FastCommentsVue from 'fastcomments-vue.vue';
 
 export default Vue.extend({
   name: 'ServeDev',
   components: {
-    FastcommentsVue
+    FastCommentsVue
   }
 });
 </script>
 
 <template>
   <div id="app">
-    <fastcomments-vue v-bind:config="{tenantId: 'demo'}" />
+    <fast-comments-vue v-bind:config="{tenantId: 'demo'}" />
   </div>
 </template>
 ```

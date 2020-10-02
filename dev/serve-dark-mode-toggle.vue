@@ -1,11 +1,11 @@
 <script lang="ts">
     import Vue from 'vue';
-    import FastcommentsVue from '@/fastcomments-vue.vue';
+    import FastCommentsVue from '@/fastcomments-vue.vue';
 
     export default Vue.extend({
         name: 'ServeDev',
         components: {
-            FastcommentsVue
+            FastCommentsVue
         },
         data() {
             return {
@@ -18,7 +18,7 @@
 <template>
     <div id="app" :class="isDarkMode ? 'dark' : 'light'">
         <button @click="isDarkMode = !isDarkMode">Toggle Dark Mode</button>
-        <fastcomments-vue v-bind:config="{tenantId: 'demo', hasDarkBackground: isDarkMode}"/>
+        <fast-comments-vue v-bind:config="{tenantId: 'demo', hasDarkBackground: isDarkMode}"/>
     </div>
 </template>
 <style>
