@@ -1,7 +1,8 @@
 {
   "name": "fastcomments-vue",
   "version": "1.0.0",
-  "description": "",
+  "author": "winrid",
+  "description": "A Vue library for FastComments",
   "main": "dist/fastcomments-vue.ssr.js",
   "browser": "dist/fastcomments-vue.esm.js",
   "module": "dist/fastcomments-vue.esm.js",
