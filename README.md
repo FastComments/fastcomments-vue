@@ -4,6 +4,8 @@
 
 [![NPM](https://img.shields.io/npm/v/fastcomments-vue.svg)](https://www.npmjs.com/package/fastcomments-vue) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+For Vue 3.0, see [fastcomments-vue-next](https://github.com/fastcomments/fastcomments-vue-next).
+
 ## Installation
 
 ### NPM
