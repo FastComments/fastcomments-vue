@@ -45,7 +45,7 @@
             lastWidgetInstance = window.FastCommentsUI(document.getElementById(this.widgetId), this.config);
         },
         watch: {
-            config(newConfig) {
+            config(newConfig : FastCommentsConfig) {
                 reset(newConfig);
             },
         },
