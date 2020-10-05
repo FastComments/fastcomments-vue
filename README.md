@@ -33,7 +33,7 @@ The widget supports a lot of options - see FastCommentsConfig [here](https://git
 ```vue
 <script lang="ts">
 import Vue from 'vue';
-import FastCommentsVue from 'fastcomments-vue.vue';
+import FastCommentsVue from 'fastcomments-vue';
 
 export default Vue.extend({
   name: 'ServeDev',
