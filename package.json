@@ -1,6 +1,6 @@
 {
   "name": "fastcomments-vue",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": "winrid",
   "license": "MIT",
   "repository": "fastcomments/fastcomments-vue",
@@ -18,6 +18,7 @@
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.ts",
     "serve-toggle-dark-mode": "vue-cli-service serve dev/serve-dark-mode-toggle.ts",
+    "serve-pagination": "vue-cli-service serve dev/serve-pagination.ts",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
@@ -33,6 +34,7 @@
     "@vue/cli-plugin-babel": "^4.3.1",
     "@vue/cli-plugin-typescript": "^4.3.1",
     "@vue/cli-service": "^4.3.1",
+    "vue-router": "^3.4.8",
     "cross-env": "^7.0.2",
     "fastcomments-typescript": "https://github.com/FastComments/fastcomments-typescript#main",
     "minimist": "^1.2.5",

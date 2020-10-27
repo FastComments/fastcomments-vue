@@ -3,7 +3,7 @@
     import FastCommentsVue from '@/fastcomments-vue.vue';
 
     export default Vue.extend({
-        name: 'ServeDev',
+        name: 'ServeDarkModeToggle',
         components: {
             FastCommentsVue
         },
