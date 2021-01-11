@@ -16,7 +16,7 @@
         data() {
             return {
                 page: 0,
-                url: null
+                url: window.location.href
             }
         },
         watch: {
