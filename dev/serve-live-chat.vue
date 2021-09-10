@@ -1,17 +1,17 @@
 <script lang="ts">
 import Vue from 'vue';
-import FastComments from '@/entry';
+import {FastCommentsLiveChat} from '@/entry';
 
 export default Vue.extend({
   name: 'ServeDev',
   components: {
-    FastComments
+    FastCommentsLiveChat
   }
 });
 </script>
 
 <template>
   <div id="app">
-    <fast-comments v-bind:config="{tenantId: 'demo'}" />
+    <fast-comments-live-chat v-bind:config="{tenantId: 'demo'}" />
   </div>
 </template>

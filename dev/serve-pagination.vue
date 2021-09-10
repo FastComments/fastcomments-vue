@@ -1,11 +1,11 @@
 <script lang="ts">
     import Vue from 'vue';
-    import FastCommentsVue from '@/fastcomments-vue.vue';
+    import FastComments from '@/fastcomments-vue.vue';
 
     export default Vue.extend({
         name: 'ServePagination',
         components: {
-            FastCommentsVue
+            FastComments
         },
         methods: {
           updatePage: function(pageNumber: number) {
@@ -32,6 +32,6 @@
         <div>Page: <span v-html="page"></span></div>
         <button @click="updatePage(page - 1)" style="margin-right: 5px">Prev</button>
         <button @click="updatePage(page + 1)">Next</button>
-        <fast-comments-vue v-bind:config="{tenantId: 'nYrnfYEv', urlId: url, url: url}"/>
+        <fast-comments v-bind:config="{tenantId: 'nYrnfYEv', urlId: url, url: url}"/>
     </div>
 </template>
