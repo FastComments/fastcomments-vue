@@ -42,7 +42,8 @@
         async mounted() {
             // @ts-ignore
             if (window && !window.FastCommentsImageChat) {
-                await insertScript('https://cdn.fastcomments.com/js/embed-image-chat.min.js', 'fastcomments-image-chat-script', window.document.body);
+                const src = this.config.region === 'eu' ? 'https://cdn-eu.fastcomments.com/js/embed-image-chat.min.js' : 'https://cdn.fastcomments.com/js/embed-image-chat.min.js';
+                await insertScript(src, 'fastcomments-image-chat-script', window.document.body);
             }
             // @ts-ignore
             lastWidgetInstance = window.FastCommentsImageChat(this.targetRef, this.config);

@@ -67,9 +67,18 @@ npm run serve-pagination
 <fast-comments-vue v-bind:config="{tenantId: 'demo', url: 'https://example.com', urlId: 'some-page-id'}" />
 ```
 
+### Account Region (ATTENTION: EU Customers)
+
+If your account is located in the EU, set `region = 'eu'` in the widget configuration, for example:
+
+```vue
+<fast-comments-vue v-bind:config="{tenantId: 'demo', url: 'https://example.com', urlId: 'some-page-id', region: 'eu'}" />
+```
+
+Otherwise, you do not have to define `region`.
 
 ## Contributing
-Please checkout our [contribution guidelines](CONTRIBUTING.md) before starting on a change. Remember to communicate first!
+Please check out our [contribution guidelines](CONTRIBUTING.md) before starting on a change. Remember to communicate first!
 
 ## License
 

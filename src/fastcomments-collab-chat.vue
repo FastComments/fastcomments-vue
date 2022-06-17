@@ -42,7 +42,8 @@
         async mounted() {
             // @ts-ignore
             if (window && !window.FastCommentsCollabChat) {
-                await insertScript('https://cdn.fastcomments.com/js/embed-collab-chat.min.js', 'fastcomments-collab-chat-script', window.document.body);
+                const src = this.config.region === 'eu' ? 'https://cdn-eu.fastcomments.com/js/embed-collab-chat.min.js' : 'https://cdn.fastcomments.com/js/embed-collab-chat.min.js';
+                await insertScript(src, 'fastcomments-collab-chat-script', window.document.body);
             }
             // @ts-ignore
             lastWidgetInstance = window.FastCommentsCollabChat(this.targetRef, this.config);

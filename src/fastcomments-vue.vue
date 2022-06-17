@@ -1,6 +1,6 @@
 <script lang="ts">
     import Vue from 'vue';
-    import {FastCommentsCommentWidgetConfig} from "../../fastcomments-typescript/src";
+    import {FastCommentsCommentWidgetConfig} from "fastcomments-typescript";
 
     async function insertScript(src: string, id: string, parentElement: Element) {
         return new Promise((resolve, reject) => {
@@ -39,7 +39,8 @@
         async mounted() {
             // @ts-ignore
             if (window && !window.FastCommentsUI) {
-                await insertScript('https://cdn.fastcomments.com/js/embed-v2.min.js', 'fastcomments-widget-script', window.document.body);
+                const src = this.config.region === 'eu' ? 'https://cdn-eu.fastcomments.com/js/embed-v2.min.js' : 'https://cdn.fastcomments.com/js/embed-v2.min.js';
+                await insertScript(src, 'fastcomments-widget-script', window.document.body);
             }
             // @ts-ignore
             lastWidgetInstance = window.FastCommentsUI(document.getElementById(this.widgetId), this.config);
