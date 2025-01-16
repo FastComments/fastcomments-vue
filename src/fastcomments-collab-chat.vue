@@ -1,6 +1,6 @@
 <script lang="ts">
     import Vue from 'vue';
-    import {FastCommentsCollabChatWidgetConfig} from "../../fastcomments-typescript/src";
+    import {FastCommentsCollabChatWidgetConfig} from "fastcomments-typescript";
 
     async function insertScript(src: string, id: string, parentElement: Element) {
         return new Promise((resolve, reject) => {
