@@ -48,6 +48,19 @@
             // @ts-ignore
             lastWidgetInstance = window.FastCommentsCollabChat(this.targetRef, this.config);
         },
+        beforeDestroy() {
+            const target = this.targetRef as Element | null;
+            if (target) {
+                target.classList.remove('fastcomments-collab-chat-container', 'fastcomments-collab-chat-dark');
+                target.querySelectorAll('.fastcomments-collab-highlighted, .fastcomments-collab-chat').forEach((n) => n.remove());
+            }
+            document.querySelectorAll(
+                '.fastcomments-collab-chat-top-bar, ' +
+                '.fastcomments-collab-chat-window, ' +
+                'body > .fastcomments-collab-chat'
+            ).forEach((n) => n.remove());
+            lastWidgetInstance = null;
+        },
         watch: {
             config(newConfig : FastCommentsCollabChatWidgetConfig) {
                 reset(newConfig);

@@ -6,6 +6,17 @@
 
 For Vue 3.0, see [fastcomments-vue-next](https://github.com/fastcomments/fastcomments-vue-next).
 
+## Live Showcase
+
+To see every widget and flow running locally against the public `demo` tenant, clone the repo and run:
+
+```bash
+npm install
+npm run serve
+```
+
+Individual demos also have their own entry points (`npm run serve-collab-chat`, `serve-live-chat`, `serve-image-chat`, `serve-pagination`, `serve-toggle-dark-mode`) under `dev/`.
+
 ## Installation
 
 ### NPM
@@ -90,3 +101,7 @@ Please check out our [contribution guidelines](CONTRIBUTING.md) before starting 
 ## License
 
 MIT © [winrid](https://github.com/winrid)
+
+## Maintenance Status
+
+These components are wrappers around our core VanillaJS components. We can automatically update these components (fix bugs, add features) without publishing this library, so while it may not be published for a while that does not mean FastComments is not under active development! Feel free to check [our blog](https://blog.fastcomments.com/) for updates. Breaking API changes or features will never be shipped to the underlying core library without a version bump in this library.

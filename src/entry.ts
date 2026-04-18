@@ -3,8 +3,11 @@ import _Vue, { PluginFunction, VueConstructor } from 'vue';
 // Import vue components
 import commentingDirective from '@/fastcomments-vue.vue';
 import collabChatDirective from '@/fastcomments-collab-chat.vue';
+import commentCountDirective from '@/fastcomments-comment-count.vue';
 import imageChatDirective from '@/fastcomments-image-chat.vue';
 import liveChatDirective from '@/fastcomments-live-chat.vue';
+import reviewsSummaryDirective from '@/fastcomments-reviews-summary.vue';
+import userActivityFeedDirective from '@/fastcomments-user-activity-feed.vue';
 
 // Define typescript interfaces for autoinstaller
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -21,8 +24,11 @@ const install: InstallFunction = function installFastcommentsVue(Vue: typeof _Vu
   install.installed = true;
   Vue.component('FastComments', commentingDirective);
   Vue.component('FastCommentsCollabChat', collabChatDirective);
+  Vue.component('FastCommentsCommentCount', commentCountDirective);
   Vue.component('FastCommentsImageChat', imageChatDirective);
   Vue.component('FastCommentsLiveChat', liveChatDirective);
+  Vue.component('FastCommentsReviewsSummary', reviewsSummaryDirective);
+  Vue.component('FastCommentsUserActivityFeed', userActivityFeedDirective);
 };
 
 // Create module definition for Vue.use()
@@ -54,16 +60,25 @@ if ('false' === process.env.ES_BUILD) {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 (collabChatDirective as any as InstallableComponent).install = install;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+(commentCountDirective as any as InstallableComponent).install = install;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 (imageChatDirective as any as InstallableComponent).install = install;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 (liveChatDirective as any as InstallableComponent).install = install;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(reviewsSummaryDirective as any as InstallableComponent).install = install;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(userActivityFeedDirective as any as InstallableComponent).install = install;
 
 // Export components
 export default commentingDirective; // retained for backwards compatibility
 export const FastComments = commentingDirective;
 export const FastCommentsCollabChat = collabChatDirective;
+export const FastCommentsCommentCount = commentCountDirective;
 export const FastCommentsImageChat = imageChatDirective;
 export const FastCommentsLiveChat = liveChatDirective;
+export const FastCommentsReviewsSummary = reviewsSummaryDirective;
+export const FastCommentsUserActivityFeed = userActivityFeedDirective;
 
 // It's possible to expose named exports when writing components that can
 // also be used as directives, etc. - eg. import { RollupDemoDirective } from 'rollup-demo';
